@@ -22,7 +22,7 @@ public class LoginController {
     private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @ApiOperation(value = "Login with the username (email) and password, " +
-            "default test users: manager, admin, basicUser; with password 'GJG2020.' ", response = LoginResource.class)
+            "default test users: manager, admin, basicUser; with password 'GJG.2020' ", response = LoginResource.class)
     @PostMapping("")
     public ResponseEntity<LoginResource> login(@RequestBody LoginDto loginDto) {
         logger.info(String.format("Requesting login user's mail: %s ", loginDto.getEmailOrUsername()));
